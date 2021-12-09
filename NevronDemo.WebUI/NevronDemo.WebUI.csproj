@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NevronDemo.Application\NevronDemo.Application.csproj" />
+    <ProjectReference Include="..\NevronDemo.Infrastructure\NevronDemo.Infrastructure.csproj" />
+    <ProjectReference Include="..\NevronDemo.Persistence\NevronDemo.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

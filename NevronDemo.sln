@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.Domain", "NevronDemo.Domain\NevronDemo.Domain.csproj", "{B91A500E-AFC2-4475-B540-612B99254672}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NevronDemo.Domain", "NevronDemo.Domain\NevronDemo.Domain.csproj", "{B91A500E-AFC2-4475-B540-612B99254672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.Persistence", "NevronDemo.Persistence\NevronDemo.Persistence.csproj", "{306882A0-FCB8-40E2-A3E2-58160A062878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NevronDemo.Persistence", "NevronDemo.Persistence\NevronDemo.Persistence.csproj", "{306882A0-FCB8-40E2-A3E2-58160A062878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.Common", "NevronDemo.Common\NevronDemo.Common.csproj", "{497EBF0E-E867-4756-B180-16124E445AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NevronDemo.Common", "NevronDemo.Common\NevronDemo.Common.csproj", "{497EBF0E-E867-4756-B180-16124E445AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.Application", "NevronDemo.Application\NevronDemo.Application.csproj", "{F90A68D9-911C-4AE3-B792-403BE3AA73B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NevronDemo.Application", "NevronDemo.Application\NevronDemo.Application.csproj", "{F90A68D9-911C-4AE3-B792-403BE3AA73B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6815B6BD-3A2A-47B0-B5C7-D5A2753068F4}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2DF39A53-85A2-44F2-A680-198AD591E20D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1D0B484C-5F5E-43EC-A6A9-E3A0E547CD32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.Infrastructure", "NevronDemo.Infrastructure\NevronDemo.Infrastructure.csproj", "{F796AC6C-900A-45D5-AEE7-3004FF70679E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NevronDemo.WebUI", "NevronDemo.WebUI\NevronDemo.WebUI.csproj", "{01F09F6A-D40C-4ACF-8E14-878F1AC5791A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,14 @@ Global
 		{F90A68D9-911C-4AE3-B792-403BE3AA73B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F90A68D9-911C-4AE3-B792-403BE3AA73B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F90A68D9-911C-4AE3-B792-403BE3AA73B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F796AC6C-900A-45D5-AEE7-3004FF70679E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F796AC6C-900A-45D5-AEE7-3004FF70679E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F796AC6C-900A-45D5-AEE7-3004FF70679E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F796AC6C-900A-45D5-AEE7-3004FF70679E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F09F6A-D40C-4ACF-8E14-878F1AC5791A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F09F6A-D40C-4ACF-8E14-878F1AC5791A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F09F6A-D40C-4ACF-8E14-878F1AC5791A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F09F6A-D40C-4ACF-8E14-878F1AC5791A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +67,8 @@ Global
 		{AE1105A6-FA6F-4E42-B56B-08151C9744A2} = {6815B6BD-3A2A-47B0-B5C7-D5A2753068F4}
 		{946F0A83-B37A-41BB-B548-CE1CE86CF687} = {6815B6BD-3A2A-47B0-B5C7-D5A2753068F4}
 		{2DF39A53-85A2-44F2-A680-198AD591E20D} = {6815B6BD-3A2A-47B0-B5C7-D5A2753068F4}
+		{F796AC6C-900A-45D5-AEE7-3004FF70679E} = {946F0A83-B37A-41BB-B548-CE1CE86CF687}
+		{01F09F6A-D40C-4ACF-8E14-878F1AC5791A} = {2DF39A53-85A2-44F2-A680-198AD591E20D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09511C1D-ECB9-4BAE-8243-17571B43E0B9}
