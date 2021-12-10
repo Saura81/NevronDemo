@@ -13,7 +13,7 @@ namespace NevronDemo.Persistence
             services.AddDbContext<NumbersDemoDbContext>(options =>
                 options.UseInMemoryDatabase(databaseName: "NumbersDemo"));
 
-            services.AddScoped(provider => provider.GetService<NumbersDemoDbContext>());
+            services.AddScoped<INumbersDemoDbContext>(provider => provider.GetService<NumbersDemoDbContext>());
 
             return services;
         }

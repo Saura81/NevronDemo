@@ -7,15 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NevronDemo.Application;
 using NevronDemo.Application.Common.Interfaces;
+using NevronDemo.ASPUI.Services;
 using NevronDemo.Infrastructure;
 using NevronDemo.Persistence;
-using NevronDemo.WebUI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NevronDemo.WebUI
+namespace NevronDemo.ASPUI
 {
     public class Startup
     {
@@ -34,9 +34,9 @@ namespace NevronDemo.WebUI
             services.AddApplication();
 
             services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddControllersWithViews();
 
-            services.AddValidatorsFromAssemblyContaining<INumbersDemoDbContext>();
-            services.AddRazorPages();
+
 
         }
 
@@ -49,11 +49,10 @@ namespace NevronDemo.WebUI
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -63,7 +62,9 @@ namespace NevronDemo.WebUI
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

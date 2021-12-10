@@ -25,13 +25,12 @@ namespace NevronDemo.Application.Numbers.Commands.DeleteNumber
 
             public async Task<Unit> Handle(DeleteNumberCommand request, CancellationToken cancellationToken)
             {
-                var entity = await db.Numbers
-                    .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+                var entities = await db.Numbers.ToListAsync();
 
-                if (entity == null)
-                    throw new NotFoundException(nameof(Number), request.Id);
+                if (entities == null)
+                    throw new NotElementsOnDatabaseException(nameof(Number));
 
-                db.Numbers.Remove(entity);
+                db.Numbers.RemoveRange(entities);
                 await db.SaveChangesAsync(cancellationToken);
 
                 return Unit.Value;

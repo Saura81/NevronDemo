@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using NevronDemo.Application.Numbers.Queries.GetNumbersSum;
+
+@model NumbersSumVM;
+
+<div>
+    @if (Model.HasNoResult)
+    {
+    <b>Sum:</b> <span>Not element to sum</span>
+    }
+    else
+    {
+    <b>Sum:</b> <span>@Model.Sum</span>
+    }
+</div>
+

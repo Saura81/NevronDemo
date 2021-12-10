@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using NevronDemo.Application.Numbers.Queries.GetNumbersList;
+
+@model NumbersListVM;
+<div>
+    @if (!Model.Numbers.Any())
+    {
+        <span>Empty Number List</span>
+    }
+    @foreach (var number in Model.Numbers)
+    {
+        <span class="badge badge-pill badge-secondary">@number.Value</span>
+    }
+    <div>
+        <b>Count:</b> <span>@Model.Numbers.Count</span>
+    </div>
+</div>

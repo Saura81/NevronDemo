@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Nevron's Numbers Task</h1>
+</div>
+
+<div class="container bg-dark">
+    <a id="btnClearNumbers" class="badge badge-danger" href="#">Clear Numbers</a>
+    <a id="btnAddNumber" class="badge badge-primary" href="#">Add Random Number</a>
+    <a id="btnSumNumbers" class="badge badge-info" href="#">Sum all Numbers</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div id="numbersList" data-url="@Url.Action(action: "NumbersList", controller: "Home")">Loading numbers...</div>
+        <div id="numbersSum" data-url="@Url.Action(action: "NumbersSum", controller: "Home")"><b>Sum:</b> <span>Not summed</span></div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+<script>
+
+      function refreshAfterCleared(){
+          loadNumbers();
+          loadNumbersSum();
+      }
+
+      function loadNumbers(){
+        var url = $("#numbersList").data("url");
+        $("#numbersList").load(url);
+    }
+
+     function loadNumbersSum(){
+        var url = $("#numbersSum").data("url");
+        $("#numbersSum").load(url);
+    }
+
+    $(document).ready(function(){
+
+         $('#btnClearNumbers').click(function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "Home/ClearNumbers",
+                type: "post",
+                success: refreshAfterCleared
+            });
+        });
+
+        $('#btnAddNumber').click(function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "Home/AddNumber",
+                type: "post",
+                success: loadNumbers
+            });
+        });
+
+        $('#btnSumNumbers').click(function(e){
+            e.preventDefault();
+            loadNumbersSum();
+        });
+
+        loadNumbers();
+    });
+</script>
+}

@@ -18,7 +18,8 @@ namespace NevronDemo.Persistence
         public DbSet<Number> Numbers { get; set; }
 
         public NumbersDemoDbContext(IDateTime dateTime,
-           ICurrentUserService currentUserService)
+           ICurrentUserService currentUserService,
+           DbContextOptions<NumbersDemoDbContext> options) : base(options)
         {
             this.dateTime = dateTime;
             this.currentUserService = currentUserService;
