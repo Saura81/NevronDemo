@@ -15,6 +15,4 @@ avoid using data annotations Use value objects when appropriated Create custom d
 
 Uses command and Query Responsibility Segregation(CQRS)+ MediatR which simplifies the overall design MediatR simplifies cross cutting concerns Fluent Validation is useful for all validations scenarios Automapper simplifies mapping and projections #Infrastructure
 
-Independent of the database Use fluent API configuration over data annotation Prefer conventions over configurations Automatically apply all entity type configurations no layer depends on Infrastructure layer #Presentation
-
 Controllers should not contain any application logic Create and consume well define view models
